@@ -11,6 +11,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  --Bleu-primaire: #646cff;
+  --Rouge-primaire: #ff4d6d;
+  --Vert-primaire: #4ade80;
+  --Jaune-primaire: #ffc107;
+
+  --Bleu--secondaire: #535bf2;
+  --Rouge--secondaire: #ff3b5a;
+  --Vert--secondaire: #22c55e;
+  --Jaune--secondaire: #ffb300;
 }
 
 a {
@@ -26,7 +36,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 100%;
   min-height: 100vh;
 }
 
