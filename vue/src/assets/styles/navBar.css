@@ -1,11 +1,11 @@
 :root {
-    --Bleu-primaire: #646cff;
-    --Rouge-primaire: #ff4d6d;
+    --Bleu-primaire: #34B7F1;
+    --Rouge-primaire: #ff0e0e;
     --Vert-primaire: #4ade80;
     --Jaune-primaire: #ffc107;
 
     --Bleu--secondaire: #535bf2;
-    --Rouge--secondaire: #ff3b5a;
+    --Rouge--secondaire: #f62a4f;
     --Vert--secondaire: #22c55e;
     --Jaune--secondaire: #ffb300;
 }
@@ -18,7 +18,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 0;
-    background: linear-gradient(90deg, var(--Rouge-primaire), var(--Bleu-primaire));
+    background: var(--Bleu-primaire);
     position: relative;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -62,12 +62,12 @@
 }
 
 .navBar-link-active {
-    background-color: var(--Bleu-primaire);
+    background: var(--Rouge--secondaire);
     color: white;
 }
 
 .navBar-link:hover {
-    background-color: var(--Bleu-primaire);
+    background-color: var(--Rouge--secondaire);
     color: white;
 }
 
