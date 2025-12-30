@@ -1,6 +1,7 @@
 import NavBar from "../components/navBar";
 import Accueil from "../components/acceuil";
 import { ACCEUIL, SERVICES, ABOUT } from "../components/navBar";
+import '../assets/styles/main.css';
 
 function Main({activePage}) {
     return (

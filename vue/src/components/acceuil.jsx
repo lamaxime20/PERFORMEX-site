@@ -8,8 +8,11 @@ import stf from '/src/assets/images/partenaires/stf.png';
 import tas from '/src/assets/images/partenaires/tas.png';
 import inginnova from '/src/assets/images/partenaires/inginnova.png';
 import sodeva from '/src/assets/images/partenaires/sodeva.png';
+import '../assets/styles/acceuil.css';
 
 function Accueil() {
+    const partners = [ark, jamalia, localMeat, mcc, ptcoeur, stf, tas, inginnova, sodeva];
+
     return(
         <div className="acceuil-root">
             <header className="acceuil-header">
@@ -18,8 +21,8 @@ function Accueil() {
             </header>
             <main className="acceuil-main">
                 <div className="acceuil-mission">
-                    <h2>Nous aidons les entreprises à maximiser leur performance financière en offrant des solutions d'investissement sur mesure, adaptées aux besoins spécifiques de chaque client.</h2>
                     <img src={logo} alt="logo" />
+                    <h2>Nous aidons les entreprises à maximiser leur performance financière en offrant des solutions d'investissement sur mesure, adaptées aux besoins spécifiques de chaque client.</h2>
                 </div>
                 <div className="acceuil-btn-container">
                     <button className="acceuil-btn-secondary">Voir nos services</button>
@@ -34,7 +37,11 @@ function Accueil() {
             <div className='acceuil-confiance'>
                 <h2>Ils nous font confiance</h2>
                 <div className='acceuil-carousel'>
-
+                    <div className="carousel-track">
+                        {partners.concat(partners).map((partner, index) => (
+                            <img key={index} src={partner} alt={`Partenaire ${index}`} className="carousel-logo" />
+                        ))}
+                    </div>
                 </div>
                 <button className="acceuil-btn-primary">Rejoignez les</button>
             </div>
