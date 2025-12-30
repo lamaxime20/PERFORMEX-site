@@ -1,4 +1,5 @@
 import NavBar from "../components/navBar";
+import Accueil from "../components/acceuil";
 import { ACCEUIL, SERVICES, ABOUT } from "../components/navBar";
 
 function Main({activePage}) {
@@ -6,7 +7,7 @@ function Main({activePage}) {
         <div className="main-root">
             <NavBar activePage={activePage} />
             <div className="main-content">
-                {activePage === ACCEUIL && <h1>Bienvenue sur la page d'accueil</h1>}
+                {activePage === ACCEUIL && <Accueil />}
                 {activePage === SERVICES && <h1>Bienvenue sur la page des services</h1>}
                 {activePage === ABOUT && <h1>Bienvenue sur la page d'à propos</h1>}
             </div>
