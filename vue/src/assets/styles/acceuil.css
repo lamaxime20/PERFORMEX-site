@@ -191,7 +191,7 @@
 
 .carousel-track {
     display: flex;
-    width: max-content;
+    width: 100em;
     animation: scroll 20s linear infinite;
 }
 

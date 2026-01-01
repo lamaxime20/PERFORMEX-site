@@ -5,9 +5,9 @@ import localMeat from '/src/assets/images/partenaires/localMeat.png';
 import mcc from '/src/assets/images/partenaires/mcc.png';
 import ptcoeur from '/src/assets/images/partenaires/ptcoeur.png';
 import stf from '/src/assets/images/partenaires/stf.png';
-import tas from '/src/assets/images/partenaires/tas.png';
+import tas from '/src/assets/images/partenaires/TAS.png';
 import inginnova from '/src/assets/images/partenaires/inginnova.png';
-import sodeva from '/src/assets/images/partenaires/sodeva.png';
+import sodeva from '/src/assets/images/partenaires/Sodeva.png';
 import '../assets/styles/acceuil.css';
 
 function Accueil() {
