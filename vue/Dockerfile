@@ -14,11 +14,11 @@ RUN npm run build
 # --- Étape 2 : Serveur de production (Nginx) ---
 FROM nginx:stable-alpine AS production-stage
 
-# Copier les fichiers compilés de l'étape précédente vers le dossier Nginx
-# Note : Vite génère par défaut les fichiers dans le dossier "dist"
+# On copie notre config personnalisée dans Nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# On copie les fichiers de build
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 
-# Exposer le port 80 (port par défaut de Nginx et standard pour le Web)
 EXPOSE 80
-
 CMD ["nginx", "-g", "daemon off;"]
