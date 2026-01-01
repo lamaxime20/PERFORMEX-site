@@ -1,6 +1,7 @@
 import NavBar from "../components/navBar";
 import Accueil from "../components/acceuil";
 import Services from "../components/services";
+import About from "../components/about";
 import { ACCEUIL, SERVICES, ABOUT } from "../components/navBar";
 import '../assets/styles/main.css';
 
@@ -11,7 +12,7 @@ function Main({activePage}) {
             <div className="main-content">
                 {activePage === ACCEUIL && <Accueil />}
                 {activePage === SERVICES && <Services />}
-                {activePage === ABOUT && <h1>Bienvenue sur la page d'à propos</h1>}
+                {activePage === ABOUT && <About />}
             </div>
         </div>
     )
