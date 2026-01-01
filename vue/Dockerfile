@@ -1,20 +1,24 @@
-# Étape 1: Build de l'application Vue.js
-FROM node:20-alpine
+# --- Étape 1 : Build de l'application (Node.js) ---
+FROM node:20-alpine AS build-stage
 
-# Définir le répertoire de travail
 WORKDIR /app
 
-# Copier package.json et package-lock.json (ou yarn.lock)
+# On installe les dépendances en premier pour profiter du cache Docker
 COPY package*.json ./
-
-# Installer les dépendances
 RUN npm install
 
-# Copier le reste du code source de l'application
+# Copier le reste du code et construire le projet
 COPY . .
+RUN npm run build
 
-# Exposer le port 5173
-EXPOSE 5173
+# --- Étape 2 : Serveur de production (Nginx) ---
+FROM nginx:stable-alpine AS production-stage
 
-# Commande pour démarrer Nginx quand le conteneur démarre
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+# Copier les fichiers compilés de l'étape précédente vers le dossier Nginx
+# Note : Vite génère par défaut les fichiers dans le dossier "dist"
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+
+# Exposer le port 80 (port par défaut de Nginx et standard pour le Web)
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
