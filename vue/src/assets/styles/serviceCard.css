@@ -1,13 +1,16 @@
 .serviceCard-root-marketing {
-    background: var(--Rouge--secondaire);
+    border-top: 5px solid var(--Rouge--secondaire);
+    background-color: #ffffff;
 }
 
 .serviceCard-root-innovation {
-    background-color: var(--Vert--secondaire);
+    border-top: 5px solid var(--Vert--secondaire);
+    background-color: #ffffff;
 }
 
 .serviceCard-root-industriel {
-    background-color: var(--Bleu--secondaire);
+    border-top: 5px solid var(--Bleu--secondaire);
+    background-color: #ffffff;
 }
 
 .serviceCard-marketing {
@@ -30,17 +33,218 @@
     flex-direction: row;
 }
 
+.serviceCard-root {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard-root:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.serviceCard-header {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.serviceCard-header h2 {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.serviceCard-type {
+    width: fit-content;
+    padding: 5px 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9em;
+    clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 50%, calc(100% - 15px) 100%, 15px 100%, 0% 50%);
+    margin: 5px 0;
+}
+
+.serviceCard-main {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.serviceCard-Info {
+    width: 50%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.serviceCard-Info h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    line-height: 1.4;
+    color: #222;
+}
+
+.serviceCard-Info p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.05em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.serviceCard-Info ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.serviceCard-Info ul li {
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #555;
+}
+
+.serviceCard-price {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--Bleu-primaire);
+    margin-top: 10px;
+}
+
+.serviceCard-Image {
+    width: 45%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceCard-Image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.serviceCard-actionButton {
+    font-size: 1.1em;
+    padding: 12px 30px;
+    width: auto;
+    align-self: flex-start;
+    border-radius: 8px;
+    background-color: #222;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.serviceCard-actionButton:hover {
+    background-color: var(--Bleu-primaire);
+}
+
+/* --- Breakpoints Responsive (1500px -> 430px) --- */
+
+@media (max-width: 1200px) {
+    .serviceCard-root {
+        padding: 35px;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .serviceCard-root {
+        padding: 30px;
+        gap: 25px;
+    }
+
+    .serviceCard-main {
+        gap: 30px;
+    }
+
+    .serviceCard-header h2 {
+        font-size: 1.8em;
+    }
+
+    .serviceCard-Info h4 {
+        font-size: 1.3em;
+    }
+
+    .serviceCard-Image img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .serviceCard-main.serviceCard-reverse,
+    .serviceCard-main.serviceCard-normal {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .serviceCard-Info {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .serviceCard-Image {
+        width: 100%;
+    }
+
+    .serviceCard-actionButton {
+        align-self: center;
+        width: 50%;
+    }
+}
+
 @media (max-width: 430px) {
     .serviceCard-root {
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 0px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        gap: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         border-radius: 16px;
-        padding: 15px 0;
+        padding: 20px 15px;
     }
 
     .serviceCard-header {
@@ -60,7 +264,7 @@
         padding: 5px 25px;
         color: white;
         font-weight: 600;
-        font-size: 0.8em;
+        font-size: 0.9em;
         clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 50%, calc(100% - 15px) 100%, 15px 100%, 0% 50%);
         margin: 5px 0;
     }
@@ -69,16 +273,17 @@
         width: 90%;
         height: auto;
         margin: 0;
-        padding: 10px 0;
+        padding: 0;
         text-align: center;
         display: flex;
-        align-items: stretch;
+        flex-direction: column-reverse;
+        align-items: center;
         justify-content: center;
-        gap: 5px;
+        gap: 20px;
     }
 
     .serviceCard-Info {
-        width: 60%;
+        width: 100%;
         height: auto;
         margin: 0;
         padding: 0;
@@ -87,20 +292,21 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap: 5px;
+        gap: 10px;
     }
 
     .serviceCard-Info h4 {
         margin: 0;
         padding: 0;
-        font-size: 0.85em;
-        line-height: 1.2;
+        font-size: 1.1em;
+        line-height: 1.3;
     }
 
     .serviceCard-Info p {
         margin: 0;
         padding: 0;
-        font-size: 0.75em;
+        font-size: 0.9em;
+        color: #555;
     }
 
     .serviceCard-Info ul {
@@ -108,22 +314,24 @@
         padding: 0;
         list-style-type: disc;
         text-align: left;
+        width: 100%;
+        padding-left: 20px;
     }
 
     .serviceCard-Info ul li {
-        margin-left: 15px;
-        margin-bottom: 2px;
-        font-size: 0.75em;
+        margin-bottom: 5px;
+        font-size: 0.85em;
     }
 
     .serviceCard-price {
-        font-size: 0.9em;
+        font-size: 1.1em;
         font-weight: 700;
         color: var(--Noir-primaire);
+        margin-top: 5px;
     }
 
     .serviceCard-Image {
-        width: 40%;
+        width: 100%;
         height: auto;
         margin: 0;
         padding: 0;
@@ -131,17 +339,19 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        gap: 15px;
     }
 
     .serviceCard-Image img {
         width: 100%;
-        flex: 1;
+        height: 200px;
         object-fit: cover;
+        border-radius: 12px;
     }
 
     .serviceCard-actionButton {
-        font-size: 0.7em;
-        padding: 5px 8px;
-        width: 95%;
+        font-size: 1em;
+        padding: 12px 20px;
+        width: 100%;
     }
 }

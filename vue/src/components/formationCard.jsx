@@ -1,3 +1,5 @@
+import '../assets/styles/formationCard.css';
+
 function FormationCard({ 
         title, description,
         avantage1, avantage2, avantage3
