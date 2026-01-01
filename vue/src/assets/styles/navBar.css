@@ -174,3 +174,11 @@
         transform: translateY(0);
     }
 }
+
+@media (prefers-color-scheme: dark) and (max-width: 430px) {
+    .navBar-links {
+        background-color: rgba(36, 36, 36, 0.95);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+}

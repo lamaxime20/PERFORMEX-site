@@ -390,3 +390,11 @@
         filter: none;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .acceuil-about {
+        background-color: #2a2a2a;
+        color: rgba(255, 255, 255, 0.87);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+}

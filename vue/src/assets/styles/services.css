@@ -294,3 +294,10 @@
         transition: background-color 0.3s ease;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .services-root {
+        background-color: #242424;
+        color: rgba(255, 255, 255, 0.87);
+    }
+}

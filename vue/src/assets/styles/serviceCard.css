@@ -355,3 +355,27 @@
         width: 100%;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .serviceCard-root,
+    .serviceCard-root-marketing,
+    .serviceCard-root-innovation,
+    .serviceCard-root-industriel {
+        background-color: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .serviceCard-Info h4 {
+        color: #f0f0f0;
+    }
+
+    .serviceCard-Info p,
+    .serviceCard-Info ul li {
+        color: #cccccc;
+    }
+
+    .serviceCard-actionButton {
+        background-color: #f0f0f0;
+        color: #222;
+    }
+}

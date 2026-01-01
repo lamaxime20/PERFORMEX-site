@@ -12,3 +12,9 @@
     margin: 0px;
     padding: 0px;
 }
+
+@media (prefers-color-scheme: dark) {
+    .main-root {
+        background-color: #242424;
+    }
+}
