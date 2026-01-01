@@ -6,6 +6,7 @@ import productNew from "../assets/images/services/productNew.png";
 import amenagement from "../assets/images/services/amenagement.png";
 import standardisation from "../assets/images/services/standardisation.png";
 import { MARKETING, INNOVATION, INDUSTRIEL} from "./serviceCard";
+import '../assets/styles/services.css';
 
 function Services() {
     return (
