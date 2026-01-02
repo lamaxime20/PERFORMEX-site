@@ -80,6 +80,16 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .navBar-links {
+        width: 85%;
+    }
+    .navBar-link {
+        font-size: 1.2em;
+    }
+}
+
+
 @media (max-width: 768px) {
     .navBar-root {
         height: 85px;

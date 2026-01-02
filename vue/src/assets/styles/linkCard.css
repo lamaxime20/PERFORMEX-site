@@ -1,0 +1,63 @@
+:root {
+    --couleur-linkedin: #0077B5;
+    --couleur-whatsapp: #25D366;
+    --couleur-mail: #EA4335;
+}
+
+.linkCard-whatsapp {
+    background: linear-gradient(135deg, var(--couleur-whatsapp), #128C7E);
+}
+
+.linkCard-linkedin {
+    background: linear-gradient(135deg, var(--couleur-linkedin), #005E93);
+}
+
+.linkCard-email {
+    background: linear-gradient(135deg, var(--couleur-mail), #C5221F);
+}
+
+.linkCard-root {
+    /* Dimensions & Layout pour un rectangle "posé sur la largeur" */
+    width: 200px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 25px; /* Espace autour du logo */
+    
+    /* Esthétique et User-Friendly */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkCard-root:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.linkCard-root img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+@media (max-width: 768px) {
+    .linkCard-root {
+        width: 140px;
+        height: 80px;
+        padding: 15px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .linkCard-root {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .linkCard-root:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+}
