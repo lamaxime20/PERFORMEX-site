@@ -1,3 +1,4 @@
+import '../assets/styles/linkCard.css';
 export const WHATSAPP = "whatsapp";
 export const LINKEDIN = "linkedin";
 export const EMAIL = "email";
