@@ -273,3 +273,21 @@
         gap: 20px;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .about-root {
+        background-color: #242424;
+    }
+    .about-header h1, .about-contacts header h2 {
+        color: rgba(255, 255, 255, 0.87);
+    }
+    .about-histoire {
+        background-color: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 77, 109, 0.2);
+        border-top: 4px solid #ff4d6d;
+    }
+    .about-description p {
+        color: rgba(255, 255, 255, 0.87);
+    }
+}

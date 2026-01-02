@@ -52,3 +52,12 @@
         padding: 15px;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .linkCard-root {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .linkCard-root:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+}
