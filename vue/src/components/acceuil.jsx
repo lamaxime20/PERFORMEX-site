@@ -1,4 +1,5 @@
 import logo from '/src/assets/images/logo.png';
+import { useNavigate } from 'react-router-dom';
 import ark from '/src/assets/images/partenaires/ARK.png';
 import jamalia from '/src/assets/images/partenaires/jamalia.png';
 import localMeat from '/src/assets/images/partenaires/localMeat.png';
@@ -11,6 +12,7 @@ import sodeva from '/src/assets/images/partenaires/Sodeva.png';
 import '../assets/styles/acceuil.css';
 
 function Accueil() {
+    const navigate = useNavigate();
     const partners = [ark, jamalia, localMeat, mcc, ptcoeur, stf, tas, inginnova, sodeva];
 
     return(
@@ -27,7 +29,7 @@ function Accueil() {
                 <div className="acceuil-btn-container">
                     <button 
                         className="acceuil-btn-secondary"
-                        onClick={() => window.open("/services", "_self")}
+                        onClick={() => navigate("/services")}
                     >
                         Voir nos services
                     </button>
@@ -49,6 +51,7 @@ function Accueil() {
                 </p>
                 <button 
                     className="acceuil-btn-primary"
+                    onClick={() => navigate("/about")}
                 >
                     En savoir plus
                 </button>

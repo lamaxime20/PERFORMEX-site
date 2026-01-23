@@ -4,8 +4,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px;
+    padding: 40px 20px; /* Added padding for breathing room */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    gap: 60px; /* Increased gap for better section separation */
     max-width: 100%;
+    background-color: #f8f9fa; /* A very light grey for a subtle background */
 }
 
 .acceuil-header {
@@ -13,29 +16,36 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0px;
+    gap: 10px; /* Added gap */
     height: auto;
     width: 100%;
     margin-top: 20px;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .acceuil-header h1 {
     width: 90%;
     max-width: 1000px;
-    font-size: 4rem;
+    font-size: 3.5rem; /* Slightly reduced for balance */
     margin: 0;
     padding: 0;
     text-align: center;
+    font-weight: 800; /* Bolder for impact */
+    letter-spacing: -1px;
+    color: #222;
 }
 
 .acceuil-header h3 {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Reduced for better hierarchy */
     width: 90%;
+    max-width: 800px;
     text-align: center;
     margin: 0px;
     padding: 0px;
+    font-weight: 400; /* Lighter weight */
+    color: #555;
 }
 
 .acceuil-main {
@@ -43,8 +53,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px; /* Increased gap */
     width: 100%;
+    max-width: 1200px; /* Max width for content */
     height: auto;
     margin-top: 20px;
     padding: 0;
@@ -56,24 +67,28 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 60px; /* Increased gap */
     width: 90%;
     height: auto;
-    text-align: center;
+    text-align: left; /* Better for readability of longer text */
 }
 
 .acceuil-mission img {
-    width: 30%;
+    width: 25%;
+    max-width: 250px; /* Max width for the logo */
     height: auto;
     margin: 0;
     padding: 0;
 }
 
 .acceuil-mission h2 {
-    width: 65%;
-    font-size: 1.7rem;
+    width: 70%;
+    font-size: 1.5rem; /* Adjusted for better readability */
     margin: 0;
     padding: 0;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #333;
 }
 
 .acceuil-btn-container {
@@ -81,7 +96,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px; /* Increased gap */
     width: 100%;
     max-width: 600px;
     height: auto;
@@ -90,66 +105,98 @@
     box-sizing: border-box;
 }
 
-.acceuil-btn-container .acceuil-btn-secondary {
-    width: auto;
-    padding: 0 30px;
-    height: 48px;
+/* --- Button Styles --- */
+.acceuil-btn-primary, .acceuil-btn-secondary {
+    padding: 14px 32px;
     font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.acceuil-btn-container .acceuil-btn-primary {
-    width: auto;
-    padding: 0 30px;
-    height: 48px;
-    font-size: 1rem;
+.acceuil-btn-primary {
+    background-color: var(--Bleu-primaire);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+.acceuil-btn-primary:hover {
+    background-color: var(--Bleu--secondaire);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.acceuil-btn-secondary {
+    background-color: transparent;
+    color: var(--Bleu-primaire);
+    border-color: var(--Bleu-primaire);
+}
+
+.acceuil-btn-secondary:hover {
+    background-color: var(--Bleu-primaire);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Remove default button styles from index.css if they conflict */
+.acceuil-btn-container .acceuil-btn-secondary,
+.acceuil-btn-container .acceuil-btn-primary {
+    width: auto; /* Overriding from mobile styles */
+    height: auto; /* Overriding from mobile styles */
+}
+
 
 .acceuil-about {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    width: 75%;
+    gap: 15px; /* Adjusted gap */
+    width: 100%;
+    max-width: 900px; /* Max width for readability */
     height: auto;
     margin: 0px;
     margin-top: 20px;
     text-align: center;
     background-color: white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    padding: 40px;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .acceuil-about:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .acceuil-about h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     width: 100%;
     margin: 0;
-    margin-top: 5px;
     padding: 0;
+    color: var(--Rouge-primaire);
 }
 
 .acceuil-about p {
-    font-size: 1.5rem;
+    font-size: 1.1rem; /* Adjusted for readability */
     width: 100%;
+    max-width: 700px; /* Limit line length */
     margin: 0;
     padding: 0;
-    line-height: 1.5;
+    line-height: 1.7;
+    color: #555;
 }
 
 .acceuil-about button {
-    width: 30%;
-    height: 48px;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    margin-top: 15px;
+    width: auto; /* Let padding define width */
+    height: auto;
+    margin-top: 20px;
 }
 
 .acceuil-confiance {
@@ -157,7 +204,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px; /* Increased gap */
     width: 100%;
     height: auto;
     margin: 0px;
@@ -166,18 +213,18 @@
 }
 
 .acceuil-confiance h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     width: 100%;
     margin: 0;
     padding: 0;
     text-align: center;
+    font-weight: 700;
+    color: #333;
 }
 
 .acceuil-confiance .acceuil-btn-primary {
     width: auto;
-    padding: 0 30px;
-    height: 48px;
-    font-size: 1rem;
+    height: auto;
     margin-bottom: 20px;
 }
 
@@ -187,25 +234,29 @@
     position: relative;
     width: 100%;
     padding: 20px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
 }
 
 .carousel-track {
     display: flex;
-    width: 100em;
-    animation: scroll 20s linear infinite;
+    /* width calculated to be double the content width for seamless loop */
+    width: calc(200px * 18); /* (logo width + margin) * number of logos * 2 */
+    animation: scroll 40s linear infinite;
 }
 
 .carousel-logo {
     height: 60px;
+    width: 140px; /* Give a fixed width */
     margin: 0 30px;
     object-fit: contain;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
+    filter: grayscale(100%) opacity(0.7);
+    transition: filter 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
 }
 
 .carousel-logo:hover {
-    filter: grayscale(0%);
+    filter: grayscale(0%) opacity(1);
 }
 
 @keyframes scroll {
