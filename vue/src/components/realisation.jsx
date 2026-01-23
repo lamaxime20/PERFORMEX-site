@@ -4,6 +4,11 @@ import whatsappLogo from '../assets/images/links/whatsappLogo.svg';
 import linkedinLogo from '../assets/images/links/linkedinLogo.svg';
 import emailLogo from '../assets/images/links/emailLogo.svg';
 import { WHATSAPP, LINKEDIN, EMAIL } from "./linkCard";
+import STF from '../assets/images/references/STF.webp';
+import Jamalia from '../assets/images/references/Jamalia.webp';
+import mcc from '../assets/images/references/mcc.webp';
+import Ptcoeur from '../assets/images/references/Ptcoeur.webp';
+import Tas from '../assets/images/references/Tas.webp';
 import '../assets/styles/realisation.css';
 
 function Realisation() {
@@ -16,56 +21,94 @@ function Realisation() {
                 </header>
                 <main className="realisation-cardsContainer">
                     <RealisationCard
-                        title="Optimisation de la chaîne de production pour une PME agroalimentaire"
+                        title="Optimisation des performances industrielles d’une PME agroalimentaire"
                         actions={[
-                            "Audit complet de la chaîne de production",
-                            "Identification et élimination des goulots d'étranglement",
-                            "Réorganisation des postes de travail",
-                            "Formation des équipes aux nouvelles procédures"
+                            "Analyse et évaluation des pertes de production (ananas)",
+                            "Optimisation de la planification et des temps de production",
+                            "Mise en place d’une nouvelle gamme de jus par l’innovation",
+                            "Formation des responsables de production"
                         ]}
                         avantages={[
-                            "Réduction des temps d'arrêt de 25%",
-                            "Augmentation de la productivité globale de 15%",
-                            "Réduction significative des pertes de matières premières"
+                            "Réduction significative des pertes de matières premières",
+                            "Gain de 2 à 3 heures de production par jour",
+                            "Diversification de l’offre produits",
+                            "Amélioration des compétences managériales internes"
                         ]}
-                        img="https://www.aljazeera.com/wp-content/uploads/2025/04/GettyImages-2212791115-1746042016.jpg?resize=770%2C513&quality=80"
-                        resume="Nous avons réorganisé la chaîne de production, réduit les temps d'arrêt et amélioré l'efficacité globale."
-                        entreprise_nom="ToleKa"
+                        img={STF}
+                        resume="PERFORM-EX Consulting a accompagné STF NATURAL SARL dans l’optimisation de ses performances industrielles, en réduisant les pertes, les temps de production et en soutenant l’innovation produit."
+                        entreprise_nom="STF NATURAL SARL (AFRICA DRINK)"
                     />
                     <RealisationCard
-                        title="Campagne de marketing digital pour une startup technologique"
+                        title="Réduction des pertes et optimisation de la chaîne d’approvisionnement d’une entreprise de snacks"
                         actions={[
-                            "Définition de la stratégie digitale et des personas",
-                            "Création de contenu engageant pour les réseaux sociaux",
-                            "Gestion des campagnes publicitaires (Ads)",
-                            "Optimisation du référencement (SEO)"
+                            "Analyse et évaluation des pertes de production",
+                            "Mise en œuvre d’actions correctives pour réduire les pertes",
+                            "Diagnostic de la chaîne d’approvisionnement",
+                            "Réduction des coûts d’approvisionnement",
+                            "Formation de la responsable production",
+                            "Contribution à la stratégie commerciale 2025"
                         ]}
                         avantages={[
-                            "Augmentation de la visibilité en ligne de 40%",
-                            "Croissance de la communauté de 200%",
-                            "Hausse du chiffre d'affaires via le canal digital"
+                            "Baisse mesurable des pertes de production",
+                            "Réduction des coûts d’approvisionnement",
+                            "Chaîne logistique plus performante",
+                            "Vision commerciale structurée pour 2025"
                         ]}
-                        img="https://www.aljazeera.com/wp-content/uploads/2025/04/GettyImages-2212791115-1746042016.jpg?resize=770%2C513&quality=80"
-                        resume="Nous avons élaboré
-                        une stratégie de marketing digital qui a augmenté la visibilité en ligne et les ventes de la startup."
-                        entreprise_nom="ToleKa"
+                        img={Jamalia}
+                        resume="L’intervention de PERFORM-EX Consulting a permis à JAMALIA GROUP-CO d’améliorer sa rentabilité grâce à une meilleure maîtrise des pertes, des coûts et une stratégie commerciale plus cohérente."
+                        entreprise_nom="JAMALIA GROUP-CO"
                     />
                     <RealisationCard
-                        title="Lancement d'un nouveau produit innovant pour une entreprise manufacturière"
+                        title="Standardisation et optimisation du processus de production d’une unité de transformation alimentaire"
                         actions={[
-                            "Étude de marché approfondie",
-                            "Développement du mix marketing",
-                            "Organisation de l'événement de lancement",
-                            "Suivi des performances post-lancement"
+                            "Réaménagement de l’atelier de production",
+                            "Standardisation du processus de fabrication des chips",
+                            "Optimisation de l’utilisation de l’huile de friture"
                         ]}
                         avantages={[
-                            "Entrée réussie sur le marché",
-                            "Couverture médiatique positive",
-                            "Objectifs de vente atteints dès le premier trimestre"
+                            "Amélioration de l’organisation de l’atelier",
+                            "Processus de production plus stable et reproductible",
+                            "Réduction des pertes en huile de friture",
+                            "Meilleure qualité du produit fini"
                         ]}
-                        img="https://www.aljazeera.com/wp-content/uploads/2025/04/GettyImages-2212791115-1746042016.jpg?resize=770%2C513&quality=80"
-                        resume="Nous avons conduit des études de marché approfondies et développé une stratégie de lancement réussie."
-                        entreprise_nom="ToleKa"
+                        img={Tas}
+                        resume="PERFORM-EX Consulting a accompagné PRUREZA dans la structuration et la standardisation de son processus de production afin d’améliorer l’efficacité et la rentabilité."
+                        entreprise_nom="PRUREZA"
+                    />
+                    <RealisationCard
+                        title="Amélioration de l’hygiène, de l’organisation et de la performance industrielle d’une unité de transformation"
+                        actions={[
+                            "Diagnostic SWOT 360° de la chaîne de valeur",
+                            "Pilotage d’une mission 5S",
+                            "Amélioration des conditions d’hygiène et de salubrité",
+                            "Formation du personnel aux pratiques 5S"
+                        ]}
+                        avantages={[
+                            "Amélioration significative des conditions de travail",
+                            "Renforcement de l’hygiène et de la sécurité",
+                            "Meilleure organisation des espaces de production",
+                            "Personnel formé et responsabilisé"
+                        ]}
+                        img={mcc}
+                        resume="Grâce à une approche 5S et un diagnostic stratégique complet, PERFORM-EX Consulting a renforcé l’organisation interne et la performance opérationnelle de La Maison du Chimiste."
+                        entreprise_nom="LA MAISON DU CHIMISTE"
+                    />
+                    <RealisationCard
+                        title="Structuration stratégique et renforcement commercial d’une entreprise de production de biscuits"
+                        actions={[
+                            "Diagnostic SWOT 360° de la chaîne de valeur commerciale",
+                            "Diagnostic de la chaîne de valeur technique",
+                            "Mission de renforcement de la force commerciale"
+                        ]}
+                        avantages={[
+                            "Vision stratégique claire des forces et faiblesses",
+                            "Meilleure structuration des activités commerciales",
+                            "Renforcement des capacités de vente",
+                            "Base solide pour la croissance future"
+                        ]}
+                        img={Ptcoeur}
+                        resume="PERFORM-EX Consulting a aidé DEMA COMPANY à structurer ses chaînes de valeur et à renforcer son dispositif commercial pour soutenir sa croissance."
+                        entreprise_nom="DEMA COMPANY"
                     />
                 </main>
             </section>
