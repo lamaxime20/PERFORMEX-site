@@ -8,13 +8,13 @@ import logo from '../assets/images/logo.png';
 
 function NavBar({activePage}) {
     const navigate = useNavigate();
-    const [isChecked, setIsChecked] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const navRef = useRef(null);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (navRef.current && !navRef.current.contains(event.target)) {
-                setIsChecked(false);
+                setIsOpen(false);
             }
         };
         document.addEventListener("mousedown", handleClickOutside);
@@ -23,40 +23,46 @@ function NavBar({activePage}) {
         };
     }, []);
 
+    const handleNavigation = (path) => {
+        navigate(path);
+        setIsOpen(false);
+    };
+
     return (
         <nav className="navBar-root" ref={navRef}>
-            <img src={logo} alt="Logo" className="navBar-logo" />
-            <h1 className="navBar-title">PERFORMEX</h1>
-            <input 
-                type="checkbox" 
-                id="navBar-toggle" 
-                className="navBar-toggle" 
-                checked={isChecked}
-                onChange={(e) => setIsChecked(e.target.checked)}
-            />
-            <label htmlFor="navBar-toggle" className="navBar-toggle-label">
-                &#9776;
-            </label>
-            <ul className="navBar-links">
+            <div className="navBar-container">
+                <div className="navBar-brand" onClick={() => handleNavigation('/')}>
+                    <img src={logo} alt="Logo" className="navBar-logo" />
+                    <h1 className="navBar-title">PERFORMEX</h1>
+                </div>
+
+                <button className={`navBar-toggle ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)} aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul className={`navBar-links ${isOpen ? 'navBar-links-open' : ''}`}>
                 <li 
                     className={`navBar-link ${activePage === ACCEUIL ? 'navBar-link-active' : ''}`}
-                    onClick={() => {navigate('/')}}
+                    onClick={() => handleNavigation('/')}
                 >
                     Acceuil
                 </li>
                 <li 
                     className={`navBar-link ${activePage === SERVICES ? 'navBar-link-active' : ''}`}
-                    onClick={() => {navigate('/services')}}
+                    onClick={() => handleNavigation('/services')}
                 >
                     Nos services
                 </li>
                 <li 
                     className={`navBar-link ${activePage === ABOUT ? 'navBar-link-active' : ''}`}
-                    onClick={() => {navigate('/about')}}
+                    onClick={() => handleNavigation('/about')}
                 >
                     A propos
                 </li>
             </ul>
+            </div>
         </nav>
     )
 }
