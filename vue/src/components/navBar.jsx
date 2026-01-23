@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 export const ACCEUIL = 'Acceuil';
 export const SERVICES = 'Nos services';
-export const ABOUT = 'A propos';
+export const REALISATIONS = 'Réalisations';
 import '../assets/styles/navBar.css';
 import logo from '../assets/images/logo.png';
 
@@ -56,10 +56,10 @@ function NavBar({activePage}) {
                     Nos services
                 </li>
                 <li 
-                    className={`navBar-link ${activePage === ABOUT ? 'navBar-link-active' : ''}`}
-                    onClick={() => handleNavigation('/about')}
+                    className={`navBar-link ${activePage === REALISATIONS ? 'navBar-link-active' : ''}`}
+                    onClick={() => handleNavigation('/realisations')}
                 >
-                    A propos
+                    Réalisations
                 </li>
             </ul>
             </div>
