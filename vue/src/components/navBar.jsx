@@ -33,7 +33,7 @@ function NavBar({activePage}) {
             <div className="navBar-container">
                 <div className="navBar-brand" onClick={() => handleNavigation('/')}>
                     <img src={logo} alt="Logo" className="navBar-logo" />
-                    <h1 className="navBar-title">PERFORMEX</h1>
+                    <h1 className="navBar-title">PERFORM-EX</h1>
                 </div>
 
                 <button className={`navBar-toggle ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)} aria-label="Menu">

@@ -31,7 +31,7 @@ function Footer() {
                             <span className="footer-link" onClick={() => navigate('/services')}>Nos services</span>
                         </li>
                         <li>
-                            <span className="footer-link" onClick={() => navigate('/about')}>À propos</span>
+                            <span className="footer-link" onClick={() => navigate('/realisations')}>Réalisations</span>
                         </li>
                     </ul>
                 </div>
