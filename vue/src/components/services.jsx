@@ -22,9 +22,9 @@ function Services() {
                         typeService={MARKETING}
                         reverse={false}
                         description="C'est un service qui consiste à analyser le marché pour comprendre les besoins et les attentes des clients potentiels."
-                        avantage1="Identifier les opportunités de marché"
-                        avantage2="Comprendre la concurrence"
-                        avantage3="Évaluer la demande pour un produit ou service"
+                        avantage1="Mieux comprendre le marché et la concurrence pour prendre des décisions stratégiques pertinentes"
+                        avantage2="Identifier des leviers de différenciation durables afin de se démarquer efficacement"
+                        avantage3="Accroître l’efficacité de la force de vente et stimuler la croissance des ventes"
                         price="200.000 FCFA"
                         imgSrc={EtudeMarche}
                     />
@@ -33,9 +33,9 @@ function Services() {
                         typeService={MARKETING}
                         reverse={true}
                         description="C'est un service qui consiste à créer et diffuser des messages publicitaires sur 03 mois pour promouvoir un produit ou service."
-                        avantage1="Augmenter la notoriété de la marque"
-                        avantage2="Attirer de nouveaux clients"
-                        avantage3="Stimuler les ventes"
+                        avantage1="Augmenter le chiffre d’affaires grâce à des campagnes digitales ciblées et mesurables"
+                        avantage2="Renforcer la visibilité et la notoriété de la marque sur les plateformes à fort impact"
+                        avantage3="Optimiser le retour sur investissement marketing dès les premiers mois de diffusion"
                         price="225.000 FCFA"
                         imgSrc={publicite}
                     />
@@ -44,9 +44,9 @@ function Services() {
                         typeService={INNOVATION}
                         reverse={false}
                         description="C'est un service qui consiste à vous accompagner dans l'introduction d'un nouveau produit sur le marché."
-                        avantage1="Créer de l'enthousiasme autour du produit"
-                        avantage2="Attirer l'attention des médias"
-                        avantage3="Générer des ventes initiales"
+                        avantage1="Réduire les risques d’échec commercial grâce à une validation marché en amont"
+                        avantage2="Accélérer la mise sur le marché de produits innovants et adaptés aux besoins clients"
+                        avantage3="Positionner efficacement les nouveaux produits pour maximiser leur adoption et leur rentabilité"
                         price="225.000 FCFA"
                         imgSrc={productNew}
                     />
@@ -55,9 +55,9 @@ function Services() {
                         typeService={INDUSTRIEL}
                         reverse={true}
                         description="C'est un service qui consiste à installer vos ateliers de production ou des usines pour optimiser les processus de fabrication."
-                        avantage1="Optimiser l'utilisation de l'espace"
-                        avantage2="Améliorer l'efficacité de la production"
-                        avantage3="Assurer la sécurité des travailleurs"
+                        avantage1="Optimiser les capacités de production en adéquation avec les besoins actuels et futurs"
+                        avantage2="Améliorer la fluidité des flux et l’organisation industrielle pour gagner en productivité"
+                        avantage3="Renforcer la sécurité, la qualité et les compétences des équipes sur le long terme"
                         price="250.000 FCFA"
                         imgSrc={amenagement}
                     />
@@ -66,9 +66,9 @@ function Services() {
                         typeService={INDUSTRIEL}
                         reverse={false}
                         description="C'est un service qui consiste à optimiser et standardiser les procédés industriels pour améliorer l'efficacité et la productivité."
-                        avantage1="Améliorer l'efficacité des processus"
-                        avantage2="Réduire les coûts de production"
-                        avantage3="Assurer la qualité constante"
+                        avantage1="Structurer et fiabiliser les processus de production pour une meilleure performance globale"
+                        avantage2="Améliorer la qualité des produits grâce à des standards clairs et mesurables"
+                        avantage3="Piloter la performance industrielle à l’aide d’indicateurs pertinents et exploitables"
                         price="225.000 FCFA"
                         imgSrc={standardisation}
                     />

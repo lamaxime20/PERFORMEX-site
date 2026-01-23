@@ -39,8 +39,14 @@ function ServiceCard({
                     <img src={imgSrc} alt="Service Illustration" />
                     <button 
                         className="serviceCard-actionButton"
+                        onClick={() => {
+                            const phone = "237683184360";
+                            const message = `Bonjour PERFORM-EX, j'aimerais en savoir plus sur votre service ${title}`;
+                            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+                            window.open(url, "_blank");
+                        }}
                     >
-                        Action Button
+                        Discutons en
                     </button>
                 </div>
             </main>

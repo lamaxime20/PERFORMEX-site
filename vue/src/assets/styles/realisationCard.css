@@ -1,0 +1,250 @@
+.realisationCard-root {
+    width: 100%;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.realisationCard-root:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.realisationCard-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.realisationCard-header img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.realisationCard-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+    padding: 25px 25px 10px 25px;
+    line-height: 1.3;
+}
+
+.realisationCard-main {
+    padding: 0 25px 30px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.realisationCard-resume h4 {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.realisationCard-actionButton {
+    padding: 12px 24px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+}
+
+.realisationCard-actionButton:hover {
+    background-color: var(--Bleu-primaire);
+    transform: translateY(-2px);
+}
+
+.realisationCard-actionButton:active {
+    transform: scale(0.98);
+}
+
+/* --- Breakpoints Responsive (1500px -> 430px) --- */
+
+@media (max-width: 1500px) {
+    .realisationCard-header h2 {
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .realisationCard-header img {
+        height: 230px;
+    }
+    
+    .realisationCard-header h2 {
+        padding: 20px 20px 10px 20px;
+    }
+
+    .realisationCard-main {
+        padding: 0 20px 25px 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .realisationCard-header img {
+        height: 220px;
+    }
+
+    .realisationCard-header h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .realisationCard-header img {
+        height: 210px;
+    }
+
+    .realisationCard-header h2 {
+        font-size: 1.35rem;
+    }
+    
+    .realisationCard-actionButton {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .realisationCard-root {
+        width: 90%;
+        max-width: 380px;
+        min-height: auto;
+        margin: 0 auto;
+        padding: 24px 20px;
+        align-items: center;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+
+    .realisationCard-header {
+        width: 100%;
+        height: auto;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .realisationCard-header img {
+        width: 100%;
+        height: 200px;
+        margin-top: 0;
+        border-radius: 14px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .realisationCard-header h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        color: #222;
+        margin: 0px;
+        padding: 0;
+        line-height: 1.35;
+        font-weight: 700;
+    }
+
+    .realisationCard-main {
+        width: 100%;
+        height: auto;
+        margin: 0px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+
+    .realisationCard-resume {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .realisationCard-resume h4 {
+        font-size: 0.95rem;
+        text-align: center;
+        color: #555;
+        font-weight: 400;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .realisationCard-actionButton {
+        width: 100%;
+        height: 48px;
+        padding: 0;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #222;
+        color: #fff;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .realisationCard-actionButton:active {
+        transform: scale(0.98);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .realisationCard-root {
+        background-color: #2a2a2a;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .realisationCard-header h2 {
+        color: rgba(255, 255, 255, 0.87);
+    }
+
+    .realisationCard-resume h4 {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .realisationCard-actionButton {
+        background-color: #fff;
+        color: #222;
+    }
+
+    @media (max-width: 430px) {
+        .realisationCard-header h2 {
+            color: rgba(255, 255, 255, 0.87);
+        }
+        .realisationCard-resume h4 {
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}

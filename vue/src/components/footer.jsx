@@ -13,7 +13,7 @@ function Footer() {
                 <div className="footer-section">
                     <div className="footer-logo-container">
                         <img src={logo} alt="PERFORMEX Logo" className="footer-logo" />
-                        <h2 className="footer-title">PERFORMEX</h2>
+                        <h2 className="footer-title">PERFORM-EX</h2>
                     </div>
                     <p className="footer-description">
                         Architectes de votre performance globale. Nous combinons marketing stratégique, innovation et excellence industrielle pour propulser votre entreprise vers de nouveaux sommets.
@@ -31,7 +31,7 @@ function Footer() {
                             <span className="footer-link" onClick={() => navigate('/services')}>Nos services</span>
                         </li>
                         <li>
-                            <span className="footer-link" onClick={() => navigate('/about')}>À propos</span>
+                            <span className="footer-link" onClick={() => navigate('/realisations')}>Réalisations</span>
                         </li>
                     </ul>
                 </div>

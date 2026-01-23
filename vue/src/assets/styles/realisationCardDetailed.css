@@ -1,0 +1,348 @@
+.realisationCardDetailed-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.realisationCardDetailed-card {
+    width: 100%;
+    max-width: 500px;
+    max-height: 95vh;
+    margin: 0 auto;
+    padding-top: 0px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    position: relative;
+}
+
+.realisationCardDetailed-card img {
+    width: 96%;
+    height: 200px;
+    border-radius: 16px;
+    margin-top: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.realisationCardDetailed-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0px;
+    padding: 0px
+}
+
+.realisationCardDetailed-main {
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 0;
+    margin-top: 0px;
+}
+
+.realisationCardDetailed-actionButton {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    width: 80%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: center;
+}
+
+.realisationCardDetailed-actionButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    background: var(--Bleu-primaire);
+}
+
+.realisationCardDetailed-actionButton:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.realisationCardDetailed-closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color:#FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.realisationCardDetailed-closeButton:hover {
+    transform: scale(1.2);
+}
+
+/* --- Breakpoints Responsive (1500px -> 430px) --- */
+
+@media (max-width: 1500px) {
+    .realisationCardDetailed-card {
+        max-height: 92vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    .realisationCardDetailed-card {
+        max-height: 90vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .realisationCardDetailed-card {
+        max-height: 88vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .realisationCardDetailed-card {
+        max-height: 85vh;
+    }
+
+    .realisationCardDetailed-actionButton {
+        width: 85%;
+    }
+
+    .realisationCardDetailed-closeButton {
+        top: 12px;
+        right: 12px;
+    }
+}
+
+@media (max-width : 430px) {
+    .realisationCardDetailed-card {
+        width: 90%;
+        max-width: 100%;
+        min-height: auto;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .realisationCardDetailed-card img {
+        width: 95%;
+        height: 150px;
+        margin-top: 9px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .realisationCardDetailed-header {
+        width: 100%;
+        margin: 0px;
+        margin-top: 5px;        
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .realisationCardDetailed-header h2 {
+        font-size: 1.4rem;
+        text-align: center;
+        color: #222;
+        margin: 0px;
+        padding: 0px;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .realisationCardDetailed-main {
+        width: 97%;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        box-sizing: border-box;
+    }
+
+    .realisationCardDetailed-actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .realisationCardDetailed-actions h3 {
+        font-size: 1.1rem;
+        text-align: left;
+        color: #222;
+        margin: 0px;
+        padding: 0px;
+        font-weight: 700;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 8px;
+    }
+
+    .realisationCardDetailed-actions ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        padding: 0px;
+        margin: 0px;
+        list-style-type: none;
+    }
+
+    .realisationCardDetailed-actions ul li {
+        font-size: 0.95rem;
+        color: #555;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+        padding-left: 12px;
+        position: relative;
+    }
+
+    .realisationCardDetailed-actions ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--Bleu-primaire);
+        font-weight: bold;
+    }
+
+    .realisationCardDetailed-avantages {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .realisationCardDetailed-avantages h3 {
+        font-size: 1.1rem;
+        text-align: left;
+        color: #222;
+        margin: 0px;
+        padding: 0px;
+        font-weight: 700;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 8px;
+    }
+
+    .realisationCardDetailed-avantages ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        padding: 0px;
+        margin: 0px;
+        list-style-type: none;
+    }
+
+    .realisationCardDetailed-avantages ul li {
+        font-size: 0.95rem;
+        color: #555;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+        padding-left: 12px;
+        position: relative;
+    }
+
+    .realisationCardDetailed-avantages ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--Vert-primaire);
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .realisationCardDetailed-actionButton {
+        width: 90%;
+        margin-top: 24px;
+        border-radius: 16px;
+    }
+
+    .realisationCardDetailed-closeButton {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50%;
+        backdrop-filter: blur(4px);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .realisationCardDetailed-card {
+        background-color: #2a2a2a;
+        color: rgba(255, 255, 255, 0.87);
+    }
+
+    .realisationCardDetailed-header h2,
+    .realisationCardDetailed-actions h3,
+    .realisationCardDetailed-avantages h3 {
+        color: rgba(255, 255, 255, 0.87);
+    }
+
+    .realisationCardDetailed-actions h3,
+    .realisationCardDetailed-avantages h3 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .realisationCardDetailed-actions ul li,
+    .realisationCardDetailed-avantages ul li {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .realisationCardDetailed-actionButton {
+        background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
+        color: #222;
+    }
+
+    @media (max-width: 430px) {
+        .realisationCardDetailed-closeButton {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}
