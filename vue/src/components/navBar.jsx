@@ -4,7 +4,7 @@ export const ACCEUIL = 'Acceuil';
 export const SERVICES = 'Nos services';
 export const REALISATIONS = 'Réalisations';
 import '../assets/styles/navBar.css';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo.webp';
 
 function NavBar({activePage}) {
     const navigate = useNavigate();

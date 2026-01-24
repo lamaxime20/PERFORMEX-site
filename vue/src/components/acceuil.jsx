@@ -1,14 +1,14 @@
-import logo from '/src/assets/images/logo.png';
+import logo from '/src/assets/images/logo.webp';
 import { useNavigate } from 'react-router-dom';
-import ark from '/src/assets/images/partenaires/ARK.png';
-import jamalia from '/src/assets/images/partenaires/jamalia.png';
-import localMeat from '/src/assets/images/partenaires/localMeat.png';
-import mcc from '/src/assets/images/partenaires/mcc.png';
-import ptcoeur from '/src/assets/images/partenaires/ptcoeur.png';
-import stf from '/src/assets/images/partenaires/stf.png';
-import tas from '/src/assets/images/partenaires/TAS.png';
-import inginnova from '/src/assets/images/partenaires/inginnova.png';
-import sodeva from '/src/assets/images/partenaires/Sodeva.png';
+import ark from '/src/assets/images/partenaires/ARK.webp';
+import jamalia from '/src/assets/images/partenaires/jamalia.webp';
+import localMeat from '/src/assets/images/partenaires/localMeat.webp';
+import mcc from '/src/assets/images/partenaires/mcc.webp';
+import ptcoeur from '/src/assets/images/partenaires/ptcoeur.webp';
+import stf from '/src/assets/images/partenaires/stf.webp';
+import tas from '/src/assets/images/partenaires/TAS.webp';
+import inginnova from '/src/assets/images/partenaires/inginnova.webp';
+import sodeva from '/src/assets/images/partenaires/Sodeva.webp';
 import '../assets/styles/acceuil.css';
 
 function Accueil() {

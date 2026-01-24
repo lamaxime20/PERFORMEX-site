@@ -1,10 +1,10 @@
 import ServiceCard from "./serviceCard";
 import FormationCard from "./formationCard";
-import EtudeMarche from "../assets/images/services/EtudeMarche.png";
-import publicite from "../assets/images/services/publicite.png";
-import productNew from "../assets/images/services/productNew.png";
-import amenagement from "../assets/images/services/amenagement.png";
-import standardisation from "../assets/images/services/standardisation.png";
+import EtudeMarche from "../assets/images/services/EtudeMarche.webp";
+import publicite from "../assets/images/services/publicite.webp";
+import productNew from "../assets/images/services/productNew.webp";
+import amenagement from "../assets/images/services/amenagement.webp";
+import standardisation from "../assets/images/services/standardisation.webp";
 import { MARKETING, INNOVATION, INDUSTRIEL} from "./serviceCard";
 import '../assets/styles/services.css';
 
